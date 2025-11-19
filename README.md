@@ -1,9 +1,25 @@
 # Fluid AI
 
-The AI chat app made for everyone.
+**The beautiful, privacy-first, open-source AI chat app — for everyone.**
 
-<img src="/readme/screenshot.png" alt="Fluid AI" width="600">
-<img src="/readme/login.png" alt="Fluid AI Login" width="600">
+<img src="/readme/screenshot.png" alt="Fluid AI Chat Interface" width="100%"/>
+<img src="/readme/login.png" alt="Fluid AI Login Screen" width="100%"/>
+
+Fluid AI is a modern, fast, and fully local-capable chat interface that works with **OpenAI, Gemini, Anthropic, Grok, Ollama and more** — all in one clean UI.
+
+### Why Fluid AI?
+- Private by default — your chats never leave your device unless you want them to  
+- Works 100% offline with local models (Ollama)  
+- Stores on Supabase (easy to migrate)
+- Beautiful, responsive design with dark and light mode
+
+## 🚀 Quick Start (Local Development)
+
+### Prerequisites
+- Node.js **v18 or v20** (avoid v19)
+- Supabase
+- Docker Desktop (for local Supabase)
+
 
 ## Local Quickstart
 
@@ -17,7 +33,7 @@ npm i -g @fluid-ai/chat
 
 ### 2. Install Dependencies
 
-Open a terminal in the root directory of the Fluid AI folder and run:
+Open a terminal in the root directory of the Fluid AI instance and run:
 
 ```bash
 npm install 
@@ -63,7 +79,7 @@ scoop install supabase
 
 #### 3. Start Supabase
 
-In your terminal at the root of your local Fluid AI folder, run:
+In your terminal at the root of your local Fluid AI instance, run:
 
 ```bash
 supabase start
@@ -73,7 +89,7 @@ supabase start
 
 #### 1. Environment Variables
 
-In your terminal at the root of your local Fluid AI folder, run:
+In your terminal at the root of your local Fluid AI instance, run:
 
 ```bash
 cp .env.local.example .env.local
@@ -91,7 +107,10 @@ Now go to your `.env.local` file and fill in the values.
 
 If the environment variable is set, it will disable the input in the user settings.
 
-#### 2. SQL Setup
+#### 2. SQL Setup (NOT NECESSARY)
+When you delete a file you uploaded (image, PDF, etc.), the file is removed from the chat UI but the actual file stays in Supabase Storage forever (it takes ~0.1 MB).
+That’s it. No crashes, no errors, no missing features.
+
 
 In the 1st migration file `supabase/migrations/20240108234540_setup.sql` you will need to replace 2 values with the values you got above:
 
@@ -102,11 +121,11 @@ This prevents issues with storage files not being deleted properly.
 
 ### 5. Install Ollama (optional for local models)
 
-Follow the instructions [here](https://github.com/jmorganca/ollama#macos).
+Download [here](https://ollama.com).
 
 ### 6. Run app locally
 
-In your terminal at the root of your local Fluid AI folder, run:
+In your terminal at the root of your local Fluid AI instance, run:
 
 ```bash
 npm run chat
