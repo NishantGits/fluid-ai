@@ -112,7 +112,7 @@ If the environment variable is set, it will disable the input in the user settin
 
 #### 2. SQL Setup (NOT NECESSARY)
 When you delete a file you uploaded (image, PDF, etc.), the file is removed from the chat UI but the actual file stays in Supabase Storage forever (it takes ~0.1 MB).
-That’s it. No crashes, no errors, no missing features.
+This step fixes this error, but it is not nessacary. 
 
 
 In the 1st migration file `supabase/migrations/20240108234540_setup.sql` you will need to replace 2 values with the values you got above:
