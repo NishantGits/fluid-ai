@@ -13,6 +13,9 @@ Fluid AI is a modern, fast, and fully local-capable chat interface that works wi
 - Stores on Supabase (easy to migrate)
 - Beautiful, responsive design with dark and light mode
 
+### Updates
+Check the Updates for the Fluid AI Instance (npm) in UPDATES.md. More updates are on the way!
+
 ## 🚀 Quick Start (Local Development)
 
 ### Prerequisites
